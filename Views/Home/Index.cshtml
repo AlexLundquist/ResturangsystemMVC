@@ -1,0 +1,24 @@
+﻿@model List<Meny>
+
+<div class="text-center" style="font-size: 1.1em; padding-top: 20px;">
+    <div class="card text-white bg-primary mb-3 mx-auto" style="max-width: 20rem;">
+        <div class="card-header">Welcome to</div>
+        <div class="card-body">
+            <h4 class="card-title">Amalia</h4>
+            <p class="card-text">Amalia is located at the intersection with Nalen and Regeringsgatan.</p>
+            <p>Here you can enjoy a good meal with a view of the city. Some of the famous dishes below</p>
+        </div>
+    </div>
+</div>
+
+@foreach (var menyItem in Model)
+{
+    <div class="align-content-center" style="padding-top:20px; margin: 0 auto; text-align: center;">
+        <div class="card border-primary mb-3 mx-auto" style="max-width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title">@menyItem.Namn</h4>
+                <p class="card-text">Pris: @menyItem.Pris</p>
+            </div>
+        </div>
+    </div>
+}

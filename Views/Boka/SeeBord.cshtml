@@ -1,0 +1,30 @@
+﻿   @model ResturangsystemMVC.Models.ViewModels.SeeBordViewModel
+
+<h3>@ViewData["Message"]</h3>
+
+<p>Email: @Model.BokaBord.Email</p>
+<p>Namn: @Model.BokaBord.Namn</p>
+
+@foreach (var table in Model.AvailableTables)
+{
+    <div class="card" style="width:18rem">
+        <div class="card-body">
+
+
+    <p>Bordsnummer: @table.BordsNummer</p>
+
+    <form asp-action="BokaValdBord" method="post">
+        <input type="hidden" name="Bordsnummer" value="@table.BordsNummer" />
+        <input type="hidden" name="Email" value="@Model.BokaBord.Email" />
+        <input type="hidden" name="name" value="@Model.BokaBord.Namn" />
+        <input type="hidden" name="Datum" value="@Model.BokaBord.Datum" />
+        <input type="hidden" name="Antal" value="@Model.BokaBord.Antal" />
+        <button type="submit" class="btn btn-primary">Book -> </button>
+    </form>
+
+        </div>
+    </div>
+}
+
+
+

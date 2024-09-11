@@ -1,0 +1,16 @@
+﻿@model CreateABokningDTO
+
+
+<div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+        <h4 class="card-title">Thank you and welcome, @Model.name</h4>
+        <p class="card-text">
+        You have booked a table for @Model.antal people at @Model.datum.
+        Look forward to seeing you!
+        </p>
+
+
+        <p class="card-text">A confirmation Email has been sent to your adress at @Model.email as a confirmation</p>
+    </div>
+</div>
